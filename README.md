@@ -2,8 +2,7 @@
 
 A modern, responsive, and interactive personal portfolio website built to showcase my skills, projects, certifications, internships, and professional journey as a Software Developer.
 
-🌐 **Live Portfolio:** https://your-vercel-link.vercel.app
-
+🌐 **Live Portfolio:** https://vercel.com/munagalamanasas-projects/my-portfolio
 ---
 
 # 📌 About The Project
