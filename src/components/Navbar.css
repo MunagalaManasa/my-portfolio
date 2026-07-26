@@ -1,0 +1,230 @@
+/* ================================
+   NAVBAR
+================================ */
+
+.navbar {
+
+    position: fixed;
+
+    top: 0;
+    left: 0;
+
+    width: 100%;
+
+    z-index: 1000;
+
+    padding: 18px 0;
+
+    background: rgba(10,15,28,0.85);
+
+    backdrop-filter: blur(15px);
+
+    border-bottom: 1px solid rgba(255,255,255,0.08);
+
+    transition: 0.3s ease;
+
+}
+
+
+/* ================================
+   CONTAINER
+================================ */
+
+
+.nav-container {
+
+    width: 90%;
+
+    max-width: 1200px;
+
+    margin: auto;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+}
+
+
+
+/* ================================
+   LOGO
+================================ */
+
+
+.logo {
+
+    font-size: 30px;
+
+    font-weight: 800;
+
+    color: white;
+
+}
+
+
+.logo span {
+
+    background: linear-gradient(
+        135deg,
+        #38bdf8,
+        #8b5cf6
+    );
+
+    -webkit-background-clip: text;
+
+    background-clip: text;
+
+    color: transparent;
+
+}
+
+
+
+/* ================================
+   LINKS
+================================ */
+
+
+.nav-links {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 32px;
+
+}
+
+
+.nav-links a {
+
+    color: #cbd5e1;
+
+    font-size: 1rem;
+
+    font-weight: 500;
+
+    position: relative;
+
+    transition: 0.3s ease;
+
+}
+
+
+
+.nav-links a:hover {
+
+    color: white;
+
+}
+
+
+
+/* underline animation */
+
+
+.nav-links a::after {
+
+    content: "";
+
+    position: absolute;
+
+    left: 0;
+
+    bottom: -8px;
+
+    width: 0;
+
+    height: 2px;
+
+    background: linear-gradient(
+        90deg,
+        #38bdf8,
+        #8b5cf6
+    );
+
+    transition: 0.3s ease;
+
+}
+
+
+.nav-links a:hover::after {
+
+    width: 100%;
+
+}
+
+
+
+/* ================================
+   MENU ICON
+================================ */
+
+
+.menu-icon {
+
+    display: none;
+
+    color: white;
+
+    font-size: 28px;
+
+    cursor: pointer;
+
+}
+
+
+
+/* ================================
+   MOBILE
+================================ */
+
+
+@media(max-width:768px){
+
+
+    .nav-links {
+
+        position: absolute;
+
+        top: 75px;
+
+        left: 0;
+
+        width: 100%;
+
+        padding: 30px;
+
+        flex-direction: column;
+
+        gap: 25px;
+
+        background: rgba(10,15,28,0.95);
+
+        transform: translateY(-120%);
+
+        transition: 0.4s ease;
+
+    }
+
+
+
+    .nav-links.show {
+
+        transform: translateY(0);
+
+    }
+
+
+
+    .menu-icon {
+
+        display: block;
+
+    }
+
+
+}

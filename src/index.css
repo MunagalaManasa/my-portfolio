@@ -1,0 +1,630 @@
+/* ================================
+   GLOBAL RESET
+================================ */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+
+html{
+
+    scroll-behavior:smooth;
+
+    scroll-padding-top:90px;
+
+}
+
+
+
+body{
+
+    font-family:
+    "Inter",
+    "Poppins",
+    Arial,
+    sans-serif;
+
+
+    min-height:100vh;
+
+
+    background:
+
+    radial-gradient(
+        circle at top right,
+        rgba(37,99,235,0.18),
+        transparent 35%
+    ),
+
+    radial-gradient(
+        circle at bottom left,
+        rgba(124,58,237,0.18),
+        transparent 35%
+    ),
+
+    #020617;
+
+
+    color:
+    var(--text-primary);
+
+
+    overflow-x:hidden;
+
+
+    -webkit-font-smoothing:antialiased;
+
+}
+
+
+
+
+::selection{
+
+    background:
+    var(--secondary);
+
+
+    color:white;
+
+}
+
+
+
+
+a{
+
+    text-decoration:none;
+
+    color:inherit;
+
+}
+
+
+
+ul{
+
+    list-style:none;
+
+}
+
+
+
+img{
+
+    max-width:100%;
+
+    display:block;
+
+}
+
+
+
+
+/* ================================
+   VARIABLES
+================================ */
+
+
+:root{
+
+
+    /* Background */
+
+    --bg-primary:#020617;
+
+    --bg-secondary:#0F172A;
+
+
+
+    /* Cards */
+
+    --card-bg:
+
+    rgba(15,23,42,0.85);
+
+
+
+    --glass:
+
+    rgba(15,23,42,0.65);
+
+
+
+    /* Text */
+
+    --text-primary:#F8FAFC;
+
+    --text-secondary:#CBD5E1;
+
+    --text-muted:#94A3B8;
+
+
+
+    /* Brand Colors */
+
+    --primary:#2563EB;
+
+    --secondary:#7C3AED;
+
+    --accent:#38BDF8;
+
+
+
+    /* Gradient */
+
+
+    --gradient:
+
+    linear-gradient(
+        135deg,
+        #2563EB,
+        #7C3AED
+    );
+
+
+
+    /* Border */
+
+    --border:
+
+    rgba(255,255,255,0.08);
+
+
+
+    /* Shadow */
+
+    --shadow:
+
+    0 20px 50px
+    rgba(0,0,0,0.45);
+
+
+
+    /* Transition */
+
+    --transition:
+
+    all .35s ease;
+
+
+}
+
+
+
+
+
+/* ================================
+   CONTAINER
+================================ */
+
+
+.container{
+
+    width:90%;
+
+    max-width:1200px;
+
+    margin:auto;
+
+}
+
+
+
+
+/* ================================
+   SECTIONS
+================================ */
+
+
+section{
+
+    padding:100px 0;
+
+}
+
+
+
+
+/* ================================
+   SECTION TITLE
+================================ */
+
+
+.section-title{
+
+
+    text-align:center;
+
+
+    font-size:2.8rem;
+
+
+    font-weight:800;
+
+
+    margin-bottom:60px;
+
+
+    color:
+    var(--text-primary);
+
+
+}
+
+
+
+
+.gradient-text{
+
+
+    background:
+
+    var(--gradient);
+
+
+    -webkit-background-clip:text;
+
+
+    background-clip:text;
+
+
+    color:transparent;
+
+
+}
+
+
+
+
+
+/* ================================
+   BUTTONS
+================================ */
+
+
+.btn{
+
+
+    display:inline-flex;
+
+
+    align-items:center;
+
+
+    justify-content:center;
+
+
+    padding:14px 34px;
+
+
+    border-radius:30px;
+
+
+    font-weight:600;
+
+
+    cursor:pointer;
+
+
+    transition:
+    var(--transition);
+
+
+}
+
+
+
+
+.btn-primary{
+
+
+    background:
+
+    var(--gradient);
+
+
+    color:white;
+
+
+    box-shadow:
+
+    0 10px 25px
+    rgba(37,99,235,.35);
+
+
+}
+
+
+
+
+.btn-primary:hover{
+
+
+    transform:
+    translateY(-5px);
+
+
+    box-shadow:
+
+    0 15px 40px
+    rgba(37,99,235,.5);
+
+
+}
+
+
+
+
+
+.btn-outline{
+
+
+    border:
+
+    1px solid var(--primary);
+
+
+    color:white;
+
+
+    background:
+
+    transparent;
+
+
+}
+
+
+
+
+
+.btn-outline:hover{
+
+
+    background:
+
+    var(--primary);
+
+
+    transform:
+
+    translateY(-5px);
+
+
+}
+
+
+
+
+
+/* ================================
+   GLASS CARD
+================================ */
+
+
+.glass-card{
+
+
+    background:
+
+    var(--card-bg);
+
+
+
+    border:
+
+    1px solid var(--border);
+
+
+
+    backdrop-filter:
+
+    blur(18px);
+
+
+
+    border-radius:
+
+    24px;
+
+
+
+    box-shadow:
+
+    var(--shadow);
+
+
+
+    transition:
+
+    var(--transition);
+
+
+}
+
+
+
+
+.glass-card:hover{
+
+
+    transform:
+
+    translateY(-10px);
+
+
+
+    border-color:
+
+    rgba(56,189,248,.5);
+
+
+}
+
+
+
+
+
+/* ================================
+   ANIMATION
+================================ */
+
+
+.fade-in{
+
+
+    animation:
+
+    fadeIn .8s ease forwards;
+
+
+}
+
+
+
+@keyframes fadeIn{
+
+
+    from{
+
+        opacity:0;
+
+        transform:
+        translateY(40px);
+
+    }
+
+
+    to{
+
+        opacity:1;
+
+        transform:
+        translateY(0);
+
+    }
+
+
+}
+
+
+
+
+/* ================================
+   SCROLLBAR
+================================ */
+
+
+::-webkit-scrollbar{
+
+    width:9px;
+
+}
+
+
+
+
+::-webkit-scrollbar-track{
+
+    background:#020617;
+
+}
+
+
+
+
+::-webkit-scrollbar-thumb{
+
+
+    background:
+
+    var(--gradient);
+
+
+
+    border-radius:20px;
+
+
+}
+
+
+
+
+/* ================================
+   UTILITIES
+================================ */
+
+
+.text-center{
+
+    text-align:center;
+
+}
+
+
+
+.flex-center{
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+}
+
+
+
+
+
+/* ================================
+   RESPONSIVE
+================================ */
+
+
+@media(max-width:768px){
+
+
+    section{
+
+        padding:70px 0;
+
+    }
+
+
+
+    .section-title{
+
+        font-size:2.1rem;
+
+    }
+
+
+
+    .container{
+
+        width:92%;
+
+    }
+
+
+}
+
+
+
+
+@media(max-width:480px){
+
+
+    .section-title{
+
+        font-size:1.8rem;
+
+    }
+
+
+}
