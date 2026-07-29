@@ -7,14 +7,10 @@ function Experience() {
 
   const experiences = [
 
-
     {
       role: "Web Development Intern",
-
       company: "Codveda Technologies",
-
       duration: "July 2026 - August 2026",
-
       type: "Internship",
 
       description:
@@ -26,19 +22,13 @@ function Experience() {
         "HTML5",
         "CSS3"
       ]
-
     },
-
-
 
 
     {
       role:"Web Development Intern",
-
       company:"ApexPlanet Software Pvt. Ltd.",
-
       duration:"Internship Program",
-
       type:"Internship",
 
       description:
@@ -50,19 +40,13 @@ function Experience() {
         "JavaScript",
         "Responsive Design"
       ]
-
     },
-
-
 
 
     {
       role:"Python Programming & Automation Intern",
-
       company:"BlackBuck",
-
       duration:"Internship Program",
-
       type:"Internship",
 
       description:
@@ -74,252 +58,178 @@ function Experience() {
         "Scripting",
         "Problem Solving"
       ]
-
     }
-
 
   ];
 
 
 
-
   return (
 
+    <section 
+      className="experience" 
+      id="experience"
+    >
 
-<section 
-className="experience" 
-id="experience"
->
+      <div className="container">
 
 
-<div className="container">
+        <h2 className="section-title">
 
+          Professional{" "}
 
+          <span className="gradient-text">
+            Experience
+          </span>
 
-<h2 className="section-title">
+        </h2>
 
-Professional{" "}
 
-<span className="gradient-text">
 
-Experience
+        <p className="experience-description">
 
-</span>
+          Hands-on industry experience through internship programs,
+          working on web development, automation, frontend engineering,
+          and practical software development projects using modern
+          technologies.
 
-</h2>
+        </p>
 
 
 
+        <div className="experience-container">
 
-<p className="experience-description">
 
-Hands-on industry experience through internship programs,
-working on web development, automation, frontend engineering,
-and practical software development projects using modern
-technologies.
+          {
+            experiences.map((exp,index)=>(
 
-</p>
 
+              <motion.div
 
+                className="experience-card"
 
+                key={index}
 
 
+                initial={{
+                  opacity:0,
+                  x:index % 2 === 0 ? -70 : 70
+                }}
 
-<div className="timeline">
 
+                whileInView={{
+                  opacity:1,
+                  x:0
+                }}
 
-{
 
-experiences.map((exp,index)=>(
+                transition={{
+                  duration:0.7,
+                  delay:index * 0.15
+                }}
 
 
-<motion.div
+                viewport={{
+                  once:true,
+                  amount:0.3
+                }}
 
+              >
 
-className="experience-card"
 
 
-key={index}
+                <span className="experience-type">
+                  {exp.type}
+                </span>
 
 
 
-initial={{
 
-opacity:0,
+                <h3>
+                  {exp.role}
+                </h3>
 
-x:index % 2 === 0 ? -70 : 70
 
-}}
 
 
+                <h4>
+                  {exp.company}
+                </h4>
 
-whileInView={{
 
-opacity:1,
 
-x:0
 
-}}
+                <span className="experience-duration">
+                  {exp.duration}
+                </span>
 
 
 
-transition={{
 
-duration:.7,
+                <p>
+                  {exp.description}
+                </p>
 
-delay:index*.15
 
-}}
 
 
+                <div className="experience-tech">
 
-viewport={{
 
-once:true,
+                  {
+                    exp.technologies.map((tech,i)=>(
 
-amount:.3
+                      <motion.span
 
-}}
+                        key={i}
 
+                        initial={{
+                          opacity:0,
+                          scale:0.8
+                        }}
 
+                        whileInView={{
+                          opacity:1,
+                          scale:1
+                        }}
 
->
+                        transition={{
+                          delay:i * 0.08
+                        }}
 
+                        viewport={{
+                          once:true
+                        }}
 
+                      >
 
+                        {tech}
 
-<div className="experience-dot"></div>
+                      </motion.span>
 
+                    ))
+                  }
 
 
+                </div>
 
-<span className="experience-type">
 
-{exp.type}
 
-</span>
+              </motion.div>
 
 
+            ))
+          }
 
 
 
-<h3>
+        </div>
 
-{exp.role}
 
-</h3>
+      </div>
 
 
-
-
-
-<h4>
-
-{exp.company}
-
-</h4>
-
-
-
-
-
-<span className="experience-duration">
-
-{exp.duration}
-
-</span>
-
-
-
-
-
-<p>
-
-{exp.description}
-
-</p>
-
-
-
-
-
-<div className="experience-tech">
-
-
-{
-
-exp.technologies.map((tech,i)=>(
-
-
-<motion.span
-
-key={i}
-
-initial={{
-
-opacity:0,
-
-scale:.8
-
-}}
-
-whileInView={{
-
-opacity:1,
-
-scale:1
-
-}}
-
-transition={{
-
-delay:i*.08
-
-}}
-
-viewport={{
-
-once:true
-
-}}
-
->
-
-{tech}
-
-</motion.span>
-
-
-))
-
-}
-
-
-</div>
-
-
-
-
-
-</motion.div>
-
-
-))
-
-
-}
-
-
-
-</div>
-
-
-
-</div>
-
-
-</section>
-
+    </section>
 
   );
 
